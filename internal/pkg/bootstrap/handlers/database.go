@@ -7,6 +7,7 @@ package handlers
 
 import (
 	"context"
+	"github.com/edgexfoundry/edgex-go/internal/pkg/infrastructure/sqlite"
 	"sync"
 	"time"
 
@@ -28,6 +29,7 @@ const (
 	baseScriptPath = "./res/db/sql"
 	redisDBType    = "redisdb"
 	postgresDBType = "postgres"
+	sqliteDBType   = "sqlite"
 )
 
 // httpServer defines the contract used to determine whether or not the http httpServer is running.
@@ -72,6 +74,8 @@ func (d Database) newDBClient(
 		databaseConfig.Username = credentials.Username
 		// TODO: The baseScriptPath and extScriptPath should be passed in from the configuration file
 		return postgres.NewClient(ctx, databaseConfig, baseScriptPath, "", lc)
+	case sqliteDBType:
+		return sqlite.NewClient(ctx, databaseConfig, lc)
 	default:
 		return nil, db.ErrUnsupportedDatabase
 	}
