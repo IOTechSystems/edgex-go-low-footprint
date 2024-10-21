@@ -12,8 +12,6 @@ import (
 	"github.com/edgexfoundry/edgex-go/internal/pkg/db/sqlite"
 	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
 	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
-
-	_ "github.com/mattn/go-sqlite3"
 )
 
 type Client struct {
