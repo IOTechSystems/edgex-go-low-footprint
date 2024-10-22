@@ -14,7 +14,7 @@ import (
 	"github.com/edgexfoundry/go-mod-core-contracts/v3/clients/logger"
 	"github.com/edgexfoundry/go-mod-core-contracts/v3/errors"
 
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 var once sync.Once
@@ -32,7 +32,7 @@ func NewClient(ctx context.Context, config db.Configuration, lc logger.LoggingCl
 	var edgeXerr errors.EdgeX
 	once.Do(func() {
 		// Open the SQLite database file (it will be created if it doesn't exist)
-		database, err := sql.Open("sqlite3", config.Host)
+		database, err := sql.Open("sqlite", config.Host)
 		if err != nil {
 			edgeXerr = errors.NewCommonEdgeX(errors.KindDatabaseError, "fail to open sqlite connection", err)
 			return
