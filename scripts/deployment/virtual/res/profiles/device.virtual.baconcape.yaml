@@ -1,0 +1,778 @@
+name: "Bacon-Cape"
+manufacturer: "Eaton"
+model: "Bacon Cape"
+labels:
+- "device-virtual-example"
+description: " A Device-Virtual for a Bacon Cape device"
+
+deviceResources:
+-
+  name: "EnableRandomization_mPercentLoad" 
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    defaultValue: "true"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+-
+  name: "mPercentLoad"
+  isHidden: false
+  description: "Percent Load"
+  properties:
+    valueType: "Uint32"
+    readWrite: "RW"
+    defaultValue: "0"
+    units: "Watts"
+    minimum: 0.0
+    maximum: 100.0
+-
+  name: "EnableRandomization_mPFapparentTotal"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+-
+  name: "mPFapparentTotal"
+  isHidden: false
+  description: "Apparent Power Factor - Total"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: ""
+    minimum: -1.0
+    maximum: 1.0
+    defaultValue: "1.0"
+- 
+  name: "EnableRandomization_mACVAB"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVAB"
+  isHidden: false
+  description: "Volts Phase A-B"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACVAN"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVAN"
+  isHidden: false
+  description: "Volts Phase A-N"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACVBN"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVBN"
+  isHidden: false
+  description: "Volts Phase B-N"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACVCN"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVCN"
+  isHidden: false
+  description: "Volts Phase C-N"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACIA"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACIA"
+  isHidden: false
+  description: "Current Phase A"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Amps-rms"
+    minimum: 0.0
+    maximum: 100.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mWA"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mWA"
+  isHidden: false
+  description: "Watts Phase A"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Watts"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mForwardEnergyA"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+-
+  name: "mForwardEnergyA"
+  isHidden: false
+  description: "Forward Energy Phase A"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACVBC"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVBC"
+  isHidden: false
+  description: "Volts Phase B-C"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACIB"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACIB"
+  isHidden: false
+  description: "Current Phase B"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Amps-rms"
+    minimum: 0.0
+    maximum: 100.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mWB"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mWB"
+  isHidden: false
+  description: "Watts Phase B"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Watts"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mForwardEnergyB"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mForwardEnergyB"
+  isHidden: false
+  description: "Forward Energy Phase B"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACVCA"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACVCA"
+  isHidden: false
+  description: "Volts Phase C-A"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Vrms"
+    minimum: 0.0
+    maximum: 500.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mACIC"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mACIC"
+  isHidden: false
+  description: "Current Phase C"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Amps-rms"
+    minimum: 0.0
+    maximum: 100.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mWC"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0.0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mWC"
+  isHidden: false
+  description: "Watts Phase C"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "Watts"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+- 
+  name: "EnableRandomization_mForwardEnergyC"
+  isHidden: true
+  description: "used to decide whether to re-generate a random value"
+  properties:
+    valueType: "Bool"
+    readWrite: "W"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+    mask: 0
+    shift: 0
+    scale: 0
+    offset: 0.0
+    base: 0.0
+    assertion: ""
+    mediaType: ""
+  attributes:
+- 
+  name: "mForwardEnergyC"
+  isHidden: false
+  description: "Forward Energy Phase C"
+  properties:
+    valueType: "Float32"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 1500000.0
+    defaultValue: "0"
+-
+  name: "sTricolorLED"
+  isHidden: false
+  description: "Tricolor Status LED"
+  properties:
+    valueType: "Int8"
+    readWrite: "RW"
+    minimum: 0
+    maximum: 7
+    defaultValue: "0"
+-
+  name: "random_uint_a"
+  isHidden: false
+  description: "UInt16-Variable"
+  properties:
+    valueType: "Uint16"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 65535.0
+    defaultValue: "0"
+- 
+  name: "random_int_b"
+  isHidden: false
+  description: "Int16-Variable"
+  properties:
+    valueType: "Int16"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: -32768.0
+    maximum: 32767.0
+    defaultValue: "0"
+- 
+  name: "random_uint_c"
+  isHidden: false
+  description: "UInt32-Variable"
+  properties:
+    valueType: "Uint32"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 4294967295.0
+    defaultValue: "0"
+- 
+  name: "random_int_d"
+  isHidden: false
+  description: "Int32-Variable"
+  properties:
+    valueType: "Int32"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: -2147483648.0
+    maximum: 2147483647.0
+    defaultValue: "0"
+- 
+  name: "random_uint_e"
+  isHidden: false
+  description: "UInt64-Variable"
+  properties:
+    valueType: "Uint64"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: 0.0
+    maximum: 1456723456100000000.0
+    defaultValue: "0"
+- 
+  name: "random_int_f"
+  isHidden: false
+  description: "Int64-Variable"
+  properties:
+    valueType: "Int64"
+    readWrite: "RW"
+    units: "WattHours"
+    minimum: -1456723456100000000.0
+    maximum: 1456723456100000000.0
+    defaultValue: "0"
+- 
+  name: "Input_discrete_register"
+  isHidden: false
+  description: "Discrete input read register"
+  properties:
+    valueType: "Bool"
+    readWrite: "R"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "true"
+- 
+  name: "Coil_discrete_register"
+  isHidden: false
+  description: "Discrete coil register"
+  properties:
+    valueType: "Bool"
+    readWrite: "RW"
+    units: ""
+    minimum: 0.0
+    maximum: 1.0
+    defaultValue: "false"
+
+deviceCommands:
+-
+  name: "all"
+  isHidden: false
+  readWrite: "RW"
+  resourceOperations:
+    -  { deviceResource: "mPercentLoad" }
+    -  { deviceResource: "mPFapparentTotal" }
+    -  { deviceResource: "mACVAB" }
+    -  { deviceResource: "mACVBC" }
+    -  { deviceResource: "mACVCA" }
+    -  { deviceResource: "mACIA" }
+    -  { deviceResource: "mACIB" }
+    -  { deviceResource: "mACIC" }
+    -  { deviceResource: "mWA" }
+    -  { deviceResource: "mWB" }
+    -  { deviceResource: "mWC" }
+    -  { deviceResource: "mForwardEnergyA" }
+    -  { deviceResource: "mForwardEnergyB" }
+    -  { deviceResource: "mForwardEnergyC" }
+    -  { deviceResource: "mACVAN" }
+    -  { deviceResource: "mACVBN" }
+    -  { deviceResource: "mACVCN" }
+    -  { deviceResource: "sTricolorLED" }
+-
+  name: "WritemPercentLoadValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mPercentLoad" }
+    - { deviceResource: "EnableRandomization_mPercentLoad", defaultValue: "false" }
+-
+  name: "WritemPFapparentTotalValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mPFapparentTotal" }
+    - { deviceResource: "EnableRandomization_mPFapparentTotal", defaultValue: "false" }
+-
+  name: "WritemACVABValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVAB" }
+    - { deviceResource: "EnableRandomization_mACVAB", defaultValue: "false" }
+-
+  name: "WritemACVBCValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVBC" }
+    - { deviceResource: "EnableRandomization_mACVBC", defaultValue: "false" }
+-
+  name: "WritemACVCAValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVCA" }
+    - { deviceResource: "EnableRandomization_mACVCA", defaultValue: "false" }
+-
+  name: "WritemACIAValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACIA" }
+    - { deviceResource: "EnableRandomization_mACIA", defaultValue: "false" }
+-
+  name: "WritemACIBValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACIB" }
+    - { deviceResource: "EnableRandomization_mACIB", defaultValue: "false" }
+-
+  name: "WritemACICValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACIC" }
+    - { deviceResource: "EnableRandomization_mACIC", defaultValue: "false" }
+-
+  name: "WritemWAValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mWA" }
+    - { deviceResource: "EnableRandomization_mWA", defaultValue: "false" }
+-
+  name: "WritemWBValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mWB" }
+    - { deviceResource: "EnableRandomization_mWB", defaultValue: "false" }
+-
+  name: "WritemWCValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mWC" }
+    - { deviceResource: "EnableRandomization_mWC", defaultValue: "false" }
+-
+  name: "WritemForwardEnergyAValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mForwardEnergyA" }
+    - { deviceResource: "EnableRandomization_mForwardEnergyA", defaultValue: "false" }
+-
+  name: "WritemForwardEnergyBValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mForwardEnergyB" }
+    - { deviceResource: "EnableRandomization_mForwardEnergyB", defaultValue: "false" }
+-
+  name: "WritemForwardEnergyCValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mForwardEnergyC" }
+    - { deviceResource: "EnableRandomization_mForwardEnergyC", defaultValue: "false" }
+-
+  name: "WritemACVANValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVAN" }
+    - { deviceResource: "EnableRandomization_mACVAN", defaultValue: "false" }
+-
+  name: "WritemACVBNValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVBN" }
+    - { deviceResource: "EnableRandomization_mACVBN", defaultValue: "false" }
+-
+  name: "WritemACVCNValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "mACVCN" }
+    - { deviceResource: "EnableRandomization_mACVCN", defaultValue: "false" }
+-
+  name: "WritesTricolorLEDValue"
+  readWrite: "W"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "sTricolorLED" }
+-
+  name: "ReadInputDiscreteValue"
+  readWrite: "R"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "Input_discrete_register" }
+-
+  name: "RWCoilDiscreteValue"
+  readWrite: "RW"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "Coil_discrete_register" }
