@@ -10,5 +10,5 @@ export MESSAGEBUS_PROTOCOL=tcp
 export MESSAGEBUS_TYPE=mqtt
 export EDGEX_ENCODE_ALL_EVENTS_CBOR=false
 export UOM_UOMFILE=''
-export DEVICE_PROFILESDIR=/home/root/edgex/virtual/res/profiles
-export DEVICE_DEVICESDIR=/home/root/edgex/virtual/res/devices
+export DEVICE_PROFILESDIR=$PWD/virtual/res/profiles
+export DEVICE_DEVICESDIR=$PWD/virtual/res/devices

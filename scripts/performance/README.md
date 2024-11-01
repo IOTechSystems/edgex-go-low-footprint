@@ -1,15 +1,36 @@
 # Performance Scripts
 
 ## Overview
-This directory contains scripts used for monitoring the performance of the EdgeX services. The scripts are written in Shell.
+This directory contains scripts used for monitoring the performance of the EdgeX services.
+The scripts are written in Shell and can be used on Debian-like OS.
 
 ## Structure
 - `ram_cpu.sh`: Script to monitor RAM and CPU usage of specific EdgeX services.
 - `transaction_bandwidth.sh`: Script to record the number of messages and total bytes received per second.
+- `transaction_bandwidth_cbor.sh`: Script to record the number of messages and total bytes received per second when messages are encoded in CBOR format.
 - `transaction_latency.sh`: Script to record the latency of each message transmission from southbound to northbound.
+- `transaction_latency_cbor.sh`: Script to record the latency of each message transmission from southbound to northbound when messages are encoded in CBOR format.
 
 ## Prerequisites
 - Copy the `ram_cpu.sh`, `transaction_bandwidth.sh`, and `transaction_latency.sh` scripts to STM32MP157.
+- Prior to using these scripts, there are some packages that should be installed:
+  - Install the `sysstat` package, which contains the `pidstat` command that is required for the `ram_cpu.sh` script.
+    ```shell
+    apt-get install sysstat
+    ```
+  - Install the `mosquitto-clients` package, which contains the `mosquitto_sub` command that is required for the `transaction_bandwidth.sh`, `transaction_bandwidth_cbor.sh`, `transaction_latency.sh`, and `transaction_latency_cbor.sh` scripts.
+    ```shell
+      apt-get install mosquitto-clients
+    ```
+  - Install the `jq` package, which contains the `jq` command that is required for the `transaction_bandwidth.sh`, `transaction_bandwidth_cbor.sh`, `transaction_latency.sh`, and `transaction_latency_cbor.sh` scripts.
+    ```shell
+    apt-get install jq
+    ```
+  - Install the `cbor` Python package, which is required for the `transaction_bandwidth_cbor.sh` and `transaction_latency_cbor.sh` scripts.
+    ```shell
+    apt-get install python3-pip
+    pip3 install cbor
+    ```
 
 ## Usage
 

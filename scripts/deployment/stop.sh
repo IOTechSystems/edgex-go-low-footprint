@@ -16,4 +16,4 @@ FLUSHALL
 EXIT
 EOF
 
-#rm /home/root/edgex/edgex_sqlite.db
+#rm $PWD/edgex_sqlite.db

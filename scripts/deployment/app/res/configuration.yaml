@@ -5,6 +5,7 @@ Writable:
 
   Pipeline:
     ExecutionOrder: "MQTTExport"
+    TargetType: "event"
 
     Functions:
       FilterByProfileName:
