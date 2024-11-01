@@ -36,6 +36,7 @@ This directory contains scripts used for deploying the EdgeX services on STM32MP
   ```
 - Modify lines 16 to 21 in `edgex-go/Makefile` with the following changes:
   ```makefile
+  # Disable RELRO, PIE, and CGO to reduce the binary executable size and the memory footprint
   ENABLE_FULL_RELRO:="false"
   ENABLE_PIE:="false"
   GO=CGO_ENABLED=0 go
@@ -88,3 +89,8 @@ This directory contains scripts used for deploying the EdgeX services on STM32MP
 
 ## Notes
 - Update the scripts to match your deployment. In particular, the file paths in `env.sh` and `run.sh`.
+
+## Miscellaneous
+
+- Set up a WLAN connection on STM32MP157: https://wiki.st.com/stm32mpu/wiki/How_to_setup_a_WLAN_connection
+
