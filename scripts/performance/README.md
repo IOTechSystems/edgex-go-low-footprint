@@ -20,7 +20,7 @@ The scripts are written in Shell and can be used on Debian-like OS.
     ```
   - Install the `mosquitto-clients` package, which contains the `mosquitto_sub` command that is required for the `transaction_bandwidth.sh`, `transaction_bandwidth_cbor.sh`, `transaction_latency.sh`, and `transaction_latency_cbor.sh` scripts.
     ```shell
-      apt-get install mosquitto-clients
+    apt-get install mosquitto-clients
     ```
   - Install the `jq` package, which contains the `jq` command that is required for the `transaction_bandwidth.sh`, `transaction_bandwidth_cbor.sh`, `transaction_latency.sh`, and `transaction_latency_cbor.sh` scripts.
     ```shell
@@ -67,6 +67,11 @@ The scripts are written in Shell and can be used on Debian-like OS.
       Received EdgeX Event per second: 39, Total bytes: 92117
       Received EdgeX Event per second: 38, Total bytes: 87902
       ```
+    - In the case of messages that are encoded in CBOR format, run `transaction_bandwidth_cbor.sh`.
+      ```shell
+      sh transaction_bandwidth_cbor.sh
+      ```
+      See [scripts/deployment/README](../deployment/README.md#usage) for more information on how to configure the EdgeX services to encode and export Events in CBOR format.
 
 3. **Record Transaction Latency**:
     - Run `transaction_latency.sh` to record the latency of each message transmission from southbound to northbound.
@@ -100,3 +105,8 @@ The scripts are written in Shell and can be used on Debian-like OS.
       Transaction latency: 0s 80ms 153µs 163ns
       Transaction latency: 0s 150ms 680µs 878ns
       ```
+      - In the case of messages that are encoded in CBOR format, run `transaction_latency_cbor.sh`.
+        ```shell
+        sh transaction_latency_cbor.sh
+        ```
+        See [scripts/deployment/README](../deployment/README.md#usage) for more information on how to configure the EdgeX services to encode and export Events in CBOR format.

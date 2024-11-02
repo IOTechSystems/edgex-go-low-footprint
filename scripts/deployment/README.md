@@ -36,11 +36,12 @@ This directory contains scripts used for deploying the EdgeX services on STM32MP
   ```
 - Modify lines 16 to 21 in `edgex-go/Makefile` with the following changes:
   ```makefile
-  # Disable RELRO, PIE, and CGO to reduce the binary executable size and the memory footprint
   ENABLE_FULL_RELRO:="false"
   ENABLE_PIE:="false"
   GO=CGO_ENABLED=0 go
   ```
+  Disable RELRO, PIE, and CGO can build the binary executable with smaller disk size and also lower the memory footprint.
+
   Build the EdgeX core service executables:
   ```shell
   make metadata command common-config keeper 
@@ -74,6 +75,25 @@ This directory contains scripts used for deploying the EdgeX services on STM32MP
       ```shell
       source ./env.sh
       ```
+    - To reduce the resident set size (RSS) of EdgeX services, you can adjust the GOGC environment variable to a lower value than the default value of 100.
+      ```shell
+      export GOGC=20
+      ```
+      This will make the Golang garbage collector work more aggressively, but it may increase the CPU utilization.
+    - To further reduce the resident set size (RSS) and CPU utilization of EdgeX Device Service and Application Service, you can change the default encoding of the EdgeX Event messages from JSON to CBOR. This can be done by setting the `EDGEX_ENCODE_ALL_EVENTS_CBOR` environment variable to `true`.
+      ```shell
+      export EDGEX_ENCODE_ALL_EVENTS_CBOR=true
+      ```
+      CBOR is generally more efficient than JSON in terms of both size and encoding/decoding speed.
+
+    - To further reduce the CPU utilization of EdgeX Application Service, your can change the default value of TargetType from `event` to `raw` in the `app/res/configuration.yaml` file.
+      ```yaml
+      Writable:
+        Pipeline:
+          TargetType: "raw"
+      ```
+      The target type is the object type of the incoming data that is sent to the first function in the function pipeline. By default, this is an EdgeX `dtos.Event` since typical usage is receiving Events from the EdgeX MessageBus.
+      Setting the target type to `raw` means that EdgeX Application Service will receive the raw bytes of the incoming data and not marshal them into any specific type.
 
 2. **Run EdgeX Services**:
     - Run `run.sh` to start the EdgeX services and store their PIDs.
