@@ -12,3 +12,4 @@ export EDGEX_ENCODE_ALL_EVENTS_CBOR=false
 export UOM_UOMFILE=''
 export DEVICE_PROFILESDIR=$PWD/virtual/res/profiles
 export DEVICE_DEVICESDIR=$PWD/virtual/res/devices
+export GOGC=
