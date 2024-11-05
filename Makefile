@@ -14,11 +14,11 @@ INCLUDE_DELAYED_START_BUILD_CORE:="false"
 INCLUDE_DELAYED_START_BUILD_SUPPORT:="true"
 
 # change the following boolean flag to enable or disable the Full RELRO (RELocation Read Only) for linux ELF (Executable and Linkable Format) binaries
-ENABLE_FULL_RELRO:="true"
+ENABLE_FULL_RELRO:="false"
 # change the following boolean flag to enable or disable PIE for linux binaries which is needed for ASLR (Address Space Layout Randomization) on Linux, the ASLR support on Windows is enabled by default
-ENABLE_PIE:="true"
+ENABLE_PIE:="false"
 
-GO=go
+GO=CGO_ENABLED=0 go
 
 DOCKERS= \
 	docker_core_data \
