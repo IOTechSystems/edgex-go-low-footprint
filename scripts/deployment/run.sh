@@ -23,5 +23,5 @@ $PWD/virtual/device-virtual -cp=keeper.http://localhost:59890 -cd $PWD/virtual/r
 echo $! >> /tmp/edgex_pids.txt
 sleep 2
 
-$PWD/app/app-service-configurable -cp=keeper.http://localhost:59890 -cd $PWD/app/res &
+$PWD/app/app-service-configurable -s -cp=keeper.http://localhost:59890 -cd $PWD/app/res &
 echo $! >> /tmp/edgex_pids.txt
