@@ -7,6 +7,11 @@ latency_file="latency.txt"
 > "$latency_file"
 > "$buffer_file"
 
+# if buffer_file does not exist, create it
+if [ ! -f "$buffer_file" ]; then
+  touch "$buffer_file"
+fi
+
 convert_to_human_readable() {
   local ns=$1
   local seconds=$((ns / 1000000000))
@@ -28,7 +33,8 @@ do
   process_message "$message" &
 done &
 
-sleep $duration
+# sleep duration + 1 second to ensure all messages are processed
+sleep "$((duration + 1))"
 
 MOSQUITTO_SUB_PID=$(ps | grep mosquitto_sub | awk '{print $1}')
 kill "$MOSQUITTO_SUB_PID"
@@ -50,7 +56,8 @@ except:
     print({})
 " | jq -r '.event.origin')
 
-  if [ "$origin" -eq -1 ]; then
+  # if origin or recv_time_ns is not a number, skip
+  if ! echo "$origin" | grep -qE '^[0-9]+$' || ! echo "$recv_time_ns" | grep -qE '^[0-9]+$'; then
     continue
   fi
 
@@ -90,7 +97,8 @@ except:
     print({})
 " | jq -r '.event.origin')
 
-  if [ "$origin" -eq -1 ]; then
+  # if origin or recv_time_ns is not a number, skip
+  if ! echo "$origin" | grep -qE '^[0-9]+$' || ! echo "$recv_time_ns" | grep -qE '^[0-9]+$'; then
     continue
   fi
 
