@@ -25,6 +25,8 @@ This directory contains scripts used for deploying the EdgeX services on STM32MP
   systemctl start redis-server
   ```
   Or if redis-server is not installed, you can follow instruction as detailed in https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/ to install redis-server.
+  Note that [edgex-go](https://github.com/edgexfoundry/edgex-go) will switch to postgres as the default database in the next release; however, this low-footprint project is verified with redis-server as persistence database, so the redis-server is required to run the low-footprint EdgeX services. 
+
 - Ensure that mosquitto MQTT broker is running.
   ```shell
   systemctl status mosquitto
