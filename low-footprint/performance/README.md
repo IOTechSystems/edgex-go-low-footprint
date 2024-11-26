@@ -41,16 +41,14 @@ The scripts are written in Shell and can be used on Debian-like OS.
       ```
       The results are stored in the `ram_cpu.txt` file.
       ```
-      Linux 4.19.94 (stm32mp1) 	10/30/24 	_armv7l_	(2 CPU)
-
+      Linux 6.1.82 (stm32mp1) 	11/26/24 	_armv7l_	(2 CPU)
+        
       # Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM threads   fd-nr  Command
-      11:08:03      987       903    0.8%    2.0%    0.0%    0.8%    2.8%     1      0.00      0.00    5.8M    3.7M   0.9%       1      12  mosquitto
-      11:08:03      986       592    0.0%    0.2%    0.0%    0.2%    0.2%     1      0.00      0.00   28.9M    2.8M   0.7%       4      15  redis-server
-      11:08:03        0      5218    0.0%    0.0%    0.0%    0.0%    0.0%     1      0.00      0.00  543.8M   20.3M   4.7%       8      17  core-keeper
-      11:08:03        0      5243    0.0%    0.0%    0.0%    0.0%    0.0%     1      0.00      0.00  539.6M   17.7M   4.1%       8      16  core-metadata
-      11:08:03        0      5253    0.0%    0.0%    0.0%    0.0%    0.0%     1      0.00      0.00  535.2M   15.3M   3.6%       8      14  core-command
-      11:08:03        0      5266   12.2%    1.8%    0.0%    1.4%   14.0%     1      3.60      0.00  548.9M   26.4M   6.2%       8      14  device-virtual
-      11:08:03        0      5278   17.4%    6.0%    0.0%    2.2%   23.4%     0      1.60      0.00  552.3M   27.4M   6.4%       9      15  app-service-con      
+      09:48:45      985       761    0.0%    0.6%    0.0%    0.0%    0.6%     1      0.00      0.00   38.6M   12.4M   3.2%       4      13  redis-server
+      09:48:45      986       779    0.0%    0.6%    0.0%    0.2%    0.6%     1      0.00      0.00    6.2M    4.5M   1.2%       1      13  mosquitto
+      09:48:45        0      1890    0.0%    0.0%    0.0%    0.0%    0.0%     0      0.00      0.00  533.7M   15.8M   4.1%      10      24  core-combo
+      09:48:45        0      1901    1.8%    0.4%    0.0%    0.0%    2.2%     1      1.20      0.00  535.9M   18.5M   4.8%       8      10  device-virtual
+      09:48:45        0      1913    2.2%    0.8%    0.0%    0.2%    3.0%     1      3.20      0.00  539.1M   19.6M   5.0%       9      10  app-service-con
       ```
 
 2. **Record Transaction Bandwidth**:
