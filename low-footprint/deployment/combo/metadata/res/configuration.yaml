@@ -1,0 +1,24 @@
+Writable:
+  LogLevel: INFO
+  ProfileChange:
+    StrictDeviceProfileChanges: false
+    StrictDeviceProfileDeletes: false
+  UoM:
+    Validation: false
+  InsecureSecrets:
+    DB:
+      SecretName: "redisdb"
+      SecretData:
+        username: ""
+        password: ""
+
+Service:
+  Host: localhost
+  Port: 59881
+  StartupMsg: "This is the EdgeX Core Metadata Microservice"
+UoM:
+  UoMFile: ./metadata/res/uom.yaml
+
+MessageBus:
+  Optional:
+    ClientId: core-metadata

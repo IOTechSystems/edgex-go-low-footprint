@@ -1,0 +1,72 @@
+deviceList:
+  - name: Virtual-Bacon-Cape-01
+    profileName: Bacon-Cape
+    description: A Virtual Bacon Cape Device
+    labels:
+      - device-virtual-example
+      - bacon-cape
+    protocols:
+      other:
+        Address: cape-01
+        Protocol: 300
+    autoEvents:
+      - interval: 1s
+        onChange: false
+        sourceName: mWC
+      - interval: 30s
+        onChange: false
+        sourceName: all
+
+  - name: Virtual-Bacon-Cape-02
+    profileName: Bacon-Cape
+    description: A Virtual Bacon Cape Device
+    labels:
+      - device-virtual-example
+      - bacon-cape
+    protocols:
+      other:
+        Address: cape-02
+        Protocol: 300
+    autoEvents:
+      - interval: 1s
+        onChange: false
+        sourceName: mWC
+      - interval: 30s
+        onChange: false
+        sourceName: all
+
+  - name: Virtual-Bacon-Cape-03
+    profileName: Bacon-Cape
+    description: A Virtual Bacon Cape Device
+    labels:
+      - device-virtual-example
+      - bacon-cape
+    protocols:
+      other:
+        Address: cape-03
+        Protocol: 300
+    autoEvents:
+      - interval: 1s
+        onChange: false
+        sourceName: mWC
+      - interval: 30s
+        onChange: false
+        sourceName: all
+
+  - name: Virtual-Bacon-Cape-04
+    profileName: Bacon-Cape
+    description: A Virtual Bacon Cape Device
+    labels:
+      - device-virtual-example
+      - bacon-cape
+    protocols:
+      other:
+        Address: cape-04
+        Protocol: 300
+    autoEvents:
+      - interval: 1s
+        onChange: false
+        sourceName: mWC
+      - interval: 30s
+        onChange: false
+        sourceName: all
